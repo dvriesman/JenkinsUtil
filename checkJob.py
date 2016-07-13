@@ -29,9 +29,12 @@ except:
     print "Failed to parse"
     sys.exit(-7)
 
-if result.has_key( "result" ):      
+if result.has_key( "result" ) and result["result"]:      
+
     date = datetime.datetime.fromtimestamp(result["timestamp"]/1000).strftime('%Y-%m-%d %H:%M:%S')
+
     print "[" + jobName + "] date: " + date + " build number: " + result["displayName"] + " build status: " + result["result"]
+ 
     if result["result"] != "SUCCESS" :
         exit(-1)
 else:
