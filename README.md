@@ -4,6 +4,6 @@ This script just verify if a Jenkins Job fail or succeeed.
 The default Jenkins URL is http://jenkins
 
 ## To Run
-  python checkJob.py.py JOBNAME
+    python checkJob.py JOBNAME
   
   
